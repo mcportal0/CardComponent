@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&family=Rubik:wght@400;600&display=swap');
+
+body{
+        border: 0;
+        margin: 0;
+        padding: 0;
+        font-family: 'Red Hat Display', sans-serif;
+}
+:root{
+   --Desaturatedblue: hsl(224, 23%, 55%);
+   --brightBlue: hsl(245, 75%, 52%);
+   --PaleBlue:  hsl(225, 100%, 94%);
+   --primary: #fff
+
+
+}
+@import '../images/illustration-hero.svg';
+
+.container{
+   /* background-color: var(--Desaturatedblue); */
+   background-image: url(../images/pattern-background-desktop.svg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position-y: -300px;
+   display: flex;
+   height: 100vh;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+
+}
+.container .cardContent{
+    
+    width: 20%;
+    border-radius: 1rem;
+    background-color: var(--primary);
+    box-shadow: 0px 0px 100px 10px var(--Desaturatedblue);
+}
+.cardContent .cardImage{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    border-radius: 1rem 1rem 0 0;
+    background-image: url(../images/illustration-hero.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cardContent .cardAbout{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.cardAbout h2,p{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+/* CARD PLAN */
+.cardOptions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardOptions div{
+    margin: 10px;
+}
+.img{
+    background-image: url(../images/icon-music.svg);
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* margin: 20px; */
+    display: flex;
+    justify-content: center;
+}
+.cardOptions .cardPlan h3,span{
+    margin: 4px;
+}
+
+
+
+/* Style  card button */
+.cardButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.button{
+    text-align: center;
+}
+button {
+    background-color: var(--brightBlue);
+    color: #fff;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0.5rem;
+    
+}
+
+/* media query */
+@media (max-width: 375px){
+    .container{
+        background-image: url(../images/pattern-background-mobile.svg);
+        background-origin: initial;
+    }
+    .container .cardContent{
+        width: 85%;
+    }
+    .cardContent .cardAbout{
+        padding: 1rem;
+    }
+    button{
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 0.5rem;
+        border:0;
+    }
+}
